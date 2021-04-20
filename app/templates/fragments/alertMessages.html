@@ -1,0 +1,83 @@
+<span id="message-select-table" style="display: none">message.select.table</span>
+	
+<span id="message-alert-success" style="display: none">alert.success</span>
+<span id="message-alert-danger" style="display: none">alert.danger</span>
+<span id="message-alert-warning" style="display: none">alert.warning</span>
+<span id="message-alert-info" style="display: none">alert.info</span>
+
+<span id="message-button-yes" style="display: none">button.yes</span>
+<span id="message-button-no" style="display: none">button.no</span>
+<span id="validator-emptyStringValidator" style="display: none">validator.EmptyStringValidator</span>
+
+
+<div class="alert alert-primary alert-dismissible fade show" id="alert-primary" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-primary"></span></strong>
+</div>
+<div class="alert alert-secondary alert-dismissible fade show" id="alert-secondary" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-secondary"></span></strong>
+</div>
+<div class="alert alert-success alert-dismissible fade show" id="alert-success" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-success"></span></strong>
+</div>
+<div class="alert alert-danger alert-dismissible fade show" id="alert-danger" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-danger"></span></strong>
+</div>
+<div class="alert alert-warning alert-dismissible fade show" id="alert-warning" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-warning"></span></strong>
+</div>
+<div class="alert alert-info alert-dismissible fade show" id="alert-info" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-info"></span></strong>
+</div>
+<div class="alert alert-light alert-dismissible fade show" id="alert-light" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-light"></span></strong>
+</div>
+<div class="alert alert-dark alert-dismissible fade show" id="alert-dark" style="display: none">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span id="text-alert-dark"></span></strong>
+</div>
+
+<!--
+<div class="alert alert-primary alert-dismissible" role="alert" th:if="${not #strings.isEmpty(primaryMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>primaryMessage</span></strong>
+</div>	
+<div class="alert alert-secondary alert-dismissible" role="alert" th:if="${not #strings.isEmpty(secondaryMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>secondaryMessage</span></strong>
+</div>	
+<div class="alert alert-success alert-dismissible" role="alert" th:if="${not #strings.isEmpty(successMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>successMessage</span></strong>
+</div>
+<div class="alert alert-danger alert-dismissible" role="alert" th:if="${not #strings.isEmpty(dangerMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>dangerMessage</span></strong>
+</div>
+<div class="alert alert-warning alert-dismissible" role="alert" th:if="${not #strings.isEmpty(warningMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>warningMessage</span></strong>
+</div>
+<div class="alert alert-info alert-dismissible" role="alert" th:if="${not #strings.isEmpty(infoMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>infoMessage</span></strong>
+</div>
+<div class="alert alert-light alert-dismissible" role="alert" th:if="${not #strings.isEmpty(lightMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>lightMessage</span></strong>
+</div>
+<div class="alert alert-dark alert-dismissible" role="alert" th:if="${not #strings.isEmpty(darkMessage)}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><span>darkMessage</span></strong>
+</div>
+-->
+
+<div id="dlgAlertMessage" title="#{dlgAlertMessage.title}" style="display: none;">
+    <p><span id="dlgAlertMessage-text">dlgAlertMessage.text</span></p>
+</div>
