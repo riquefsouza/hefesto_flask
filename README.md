@@ -24,4 +24,8 @@ python3 run.py runserver
 
 
 git clone https://github.com/riquefsouza/hefesto_flask.git
+git init
+git add .
+git commit -m "hefesto_flask first commit"
+git push -u origin master
 
