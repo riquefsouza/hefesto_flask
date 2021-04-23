@@ -1,6 +1,9 @@
-python3 -m venv flask-env
-source flask-env/bin/activate
+python3 -m venv venv
+. venv/bin/activate
+pip install -U pip setuptools
+
 ou
+
 deactivate
 
 code .
@@ -9,16 +12,16 @@ git init
 
 touch .gitignore
 __pycache__
-flask-env
+venv
 .DS_Store
 
 git add .
 
-git commit -m "hefesto-fastapi"
+git commit -m "hefesto-flask"
 
-python3 -m pip install --upgrade pip
+pip install --upgrade pip
 
-pip3 install flask-sqlalchemy flask-migrate flask-script flask-wtf flask-login
+pip install flask-sqlalchemy flask-migrate flask-script flask-wtf flask-login
 
 python3 run.py runserver
 
