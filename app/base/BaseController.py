@@ -1,4 +1,6 @@
-from flask import request
+from flask import session
+from app.base.models.AlertMessageVO import AlertMessageVO
+from app.admin.VO.AuthenticatedUserVO import AuthenticatedUserVO
 
 class BaseController:
 
@@ -9,52 +11,39 @@ class BaseController:
     __menuItem: MenuVO
 
     def loadMessages(self):
-        self.loadMessagesWithAlertMessage(request, nil)
+        self.loadMessagesWithAlertMessage(None)
 
-    def loadMessagesWithAlertMessage(self,
-        AlertMessageVO|null $alertMessage): void
-    {
-        if ($alertMessage == null)
-            self.__alertMessage = new AlertMessageVO();
+    def loadMessagesWithAlertMessage(self, alertMessage: AlertMessageVO):
+        if (alertMessage == None)
+            self.__alertMessage = AlertMessageVO()
         else
-            self.__alertMessage = $alertMessage;
+            self.__alertMessage = alertMessage
 
-        $authenticatedUser = self.__getAuthenticatedUser($request);
+        authenticatedUser = self.getAuthenticatedUser()
 
-        if ($authenticatedUser!=null)
-        {
-            $authenticatedUser->getUser()->setActive(true);
-            self.__userLogged = $authenticatedUser->getUser();
+        if (authenticatedUser!=None):
+            authenticatedUser.getUser().setActive(True)
+            self.__userLogged = authenticatedUser.getUser()
 
-            $listMenus = $authenticatedUser->getListAdminMenus();
+            listMenus = authenticatedUser.getListAdminMenus()
 
-            self.__menuItem = $listMenus;
-        } else
-        {
-            self.__userLogged = new UserVO();
-            self.__userLogged->setActive(false);
+            self.__menuItem = listMenus
+        else:
+            self.__userLogged = UserVO()
+            self.__userLogged.setActive(False)
 
-            self.__menuItem = array();
-        }
+            self.__menuItem = []
 
-    }
+    def getAuthenticatedUser() -> AuthenticatedUserVO:
+        if (session['authenticatedUser']!=None):
+            return session['authenticatedUser']
+        else:
+            return None
 
-    public function getAuthenticatedUser(Request $request): AuthenticatedUserVO|null
-    {
-        //AuthenticatedUserVO
-        if ($request->session()->has('authenticatedUser'))
-            return $request->session()->get('authenticatedUser');
-        else
-            return null;
-    }
+    def setUserAuthenticated(self, usu: AuthenticatedUserVO):
+        session['authenticatedUser'] = usu        
 
-    public function setUserAuthenticated(Request $request, AuthenticatedUserVO $usu): void
-    {
-        $request->session()->put('authenticatedUser', $usu);
-    }
-
-    public function removeUserAuthenticated(Request $request): void
-    {
-        $request->session()->forget('authenticatedUser');    
+    def removeUserAuthenticated(self):
+        session.pop('authenticatedUser', None)
 
 

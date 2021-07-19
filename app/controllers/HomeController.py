@@ -42,5 +42,5 @@ def changePassword():
 
 @app.route('/admParameterCategoryView')
 def admParameterCategoryView():
-    return render_template('private/admParameterCategory/listAdmParameterCategory.html', 
+    return render_template('private/admParameterCategory/index.html', 
     lista = admParameterCategoryService)

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ super() }} - Access Denied{% endblock %}
+
+{% block body %}
+
+<div class="web-content">
+    <h2>{{ messages["accessDenied.text"] }}</h2>
+
+    <a href="{{ redirect('showHome') }}">{{ messages["accessDenied.backHome"] }}</a>
+</div>
+
+{% endblock %}
