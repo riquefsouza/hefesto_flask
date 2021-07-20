@@ -71,80 +71,106 @@ class UserVO:
         self.__newPassword = ""
         self.__confirmNewPassword = ""
 
+    @property
     def getId(self) -> int:
         return self.__id
 
+    @__id.setter
     def setId(self, value: int):
         self.__id = value
 
+    @property
     def getIp(self) -> str:
         return self.__ip
 
+    @__ip.setter
     def setIp(self, value: str):
         self.__ip = value
 
+    @property
     def getDate(self) -> datetime:
         return self.__date
 
+    @__date.setter
     def setDate(self, value: datetime):
         self.__date = value
 
+    @property
     def getEmail(self) -> str:
         return self.__email
 
+    @__email.setter
     def setEmail(self, value: str):
         self.__email = value
 
+    @property
     def getLogin(self) -> str:
         return self.__login
 
+    @__login.setter
     def setLogin(self, value: str):
         self.__login = value
 
+    @property
     def getName(self) -> str:
         return self.__name
 
+    @__name.setter
     def setName(self, value: str):
         self.__name = value
 
+    @property
     def getPassword(self) -> str:
         return self.__password
 
+    @__password.setter
     def setPassword(self, value: str):
         self.__password = value
 
+    @property
     def getActive(self) -> bool:
         return self.__active
 
+    @__active.setter
     def setActive(self, value: bool):
         self.__active = value
 
+    @property
     def getAdmIdProfiles(self) -> List[int]:
         return self.__admIdProfiles
 
+    @__admIdProfiles.setter
     def setAdmIdProfiles(self, admIdProfiles: List[int]):
         self.__admIdProfiles = admIdProfiles
 
+    @property
     def getUserProfiles(self) -> str:
         return self.__userProfiles
 
+    @__userProfiles.setter
     def setUserProfiles(self, userProfiles: str):
         self.__userProfiles = userProfiles
 
+    @property
     def getCurrentPassword(self) -> str:
         return self.__currentPassword
 
+    @__currentPassword.setter
     def setCurrentPassword(self, currentPassword: str):
         self.__currentPassword = currentPassword
 
+    @property
     def getNewPassword(self) -> str:
         return self.__newPassword
 
+    @__newPassword.setter
     def setNewPassword(self, newPassword: str):
         self.__newPassword = newPassword
 
+    @property
     def getConfirmNewPassword(self) -> str:
         return self.__confirmNewPassword
 
+    @__confirmNewPassword.setter
     def setConfirmNewPassword(self, confirmNewPassword: str):
         self.__confirmNewPassword = confirmNewPassword

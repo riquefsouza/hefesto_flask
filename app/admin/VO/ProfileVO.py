@@ -40,50 +40,66 @@ class ProfileVO:
     def __str__(self):
         return self.__description    
 
+    @property
     def getId(self) -> int:
         return self.__id
-    
+
+    @__id.setter
     def setId(self, value: int):    
         self.__id = value    
 
+    @property
     def getAdministrator(self) -> bool:    
         return self.__administrator    
 
+    @__administrator.setter
     def setAdministrator(self, value: bool):    
         self.__administrator = value    
 
+    @property
     def getDescription(self) -> str:    
         return self.__description    
 
+    @__description.setter
     def setDescription(self, value: str):    
         self.__description = value    
 
+    @property
     def getGeneral(self) -> bool:    
         return self.__general
     
+    @__general.setter
     def setGeneral(self, value: bool):    
         self.__general = value
     
+    @property    
     def getIntersection(self) -> bool:
         return self.__intersection
     
+    @__intersection.setter
     def setIntersection(self, value: bool):    
-        self.__intersection = value    
+        self.__intersection = value
 
+    @property
     def getPages(self) -> List[PageVO]:
         return self.__pages    
 
+    @__pages.setter
     def setPages(self, pages: List[PageVO]):    
-        self.__pages =pages
+        self.__pages = pages
 
+    @property
     def getUsers(self) -> List[UserVO]:
         return self.__users
-    
+
+    @__users.setter
     def setUsers(self, users: List[UserVO]):
         self.__users = users
 
+    @property
     def getExcludedUsers(self) -> List[UserVO]:
         return self.__excludedUsers
     
+    @__excludedUsers.setter
     def setExcludedUsers(self, excludedUsers: List[UserVO]):    
         self.__excludedUsers = excludedUsers

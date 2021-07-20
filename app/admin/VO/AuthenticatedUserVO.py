@@ -167,62 +167,82 @@ class AuthenticatedUserVO:
                     break                
         return menu    
 
+    @property
     def getUserName(self) -> str:
         return self.__userName
     
+    @__userName.setter
     def setUserName(self, userName: str):    
         self.__userName = userName    
 
+    @property
     def getDisplayName(self) -> str:    
-        return self.__displayName    
+        return self.__displayName
 
+    @__displayName.setter
     def setDisplayName(self, displayName: str):    
         self.__displayName = displayName    
 
+    @property
     def getEmail(self) -> str:    
         return self.__email    
 
+    @__email.setter
     def setEmail(self, email: str):    
         self.__email = email
     
+    @property
     def getListPermission(self) -> List[PermissionVO]:
         return self.__listPermission
     
+    @__listPermission.setter
     def setListPermission(self, listPermission: List[PermissionVO]):    
         self.__listPermission = listPermission    
 
+    @property
     def getListMenus(self) -> List[MenuVO]:
         return self.__listMenus
     
+    @__listMenus.setter
     def setListMenus(self, listMenus: List[MenuVO]):
         self.__listMenus = listMenus
 
+    @property
     def getListAdminMenus(self) -> List[MenuVO]:
-        return self.__listAdminMenus    
+        return self.__listAdminMenus
 
+    @__listAdminMenus.setter
     def setListAdminMenus(self, listAdminMenus: List[MenuVO]):    
         self.__listAdminMenus = listAdminMenus    
 
+    @property
     def getUser(self) -> UserVO:    
-        return self.__user    
+        return self.__user
 
+    @__user.setter
     def setUser(self, user: UserVO):    
         self.__user = user    
 
+    @property
     def getModeTest(self) -> bool:    
         return self.__modeTest
     
+    @__modeTest.setter
     def setModeTest(self, modeTest: bool):    
         self.__modeTest = modeTest    
 
+    @property
     def getModeTestLogin(self) -> str:    
-        return self.__modeTestLogin    
+        return self.__modeTestLogin
 
+    @__modeTestLogin.setter
     def setModeTestLogin(self, modeTestLogin: str):    
         self.__modeTestLogin = modeTestLogin    
 
+    @property
     def getModeTestLoginVirtual(self) -> str:    
-        return self.__modeTestLoginVirtual    
+        return self.__modeTestLoginVirtual
 
+    @__modeTestLoginVirtual.setter
     def setModeTestLoginVirtual(self, modeTestLoginVirtual: str):    
         self.__modeTestLoginVirtual = modeTestLoginVirtual

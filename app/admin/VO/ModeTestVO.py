@@ -16,21 +16,27 @@ class ModeTestVO:
         self.__login = login
         self.__loginVirtual = loginVirtual    
 
+    @property
     def getActive(self) -> bool:    
         return self.__active    
 
+    @__active.setter
     def setActive(self, value: bool):    
         self.__active = value    
 
+    @property
     def getLogin(self) -> str:    
         return self.__login    
 
+    @__login.setter
     def setLogin(self, value: str):    
         self.__login = value
-    
+
+    @property    
     def getLoginVirtual(self) -> str:    
         return self.__loginVirtual    
 
+    @__loginVirtual.setter
     def setLoginVirtual(self, value: str):    
         self.__loginVirtual = value
     

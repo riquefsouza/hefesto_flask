@@ -16,15 +16,19 @@ class PermissionVO:
         self.__profile = ProfileVO()
         self.__pages = []
 
+    @property
     def getPages(self) -> List[PageVO]:
         return self.__pages
 
+    @__pages.setter
     def setPages(self, pages: List[PageVO]):
         self.__pages = pages
 
+    @property
     def getProfile(self) -> ProfileVO:
         return self.__profile
 
+    @__profile.setter
     def setProfile(self, profile: ProfileVO):
         self.__profile = profile
 
