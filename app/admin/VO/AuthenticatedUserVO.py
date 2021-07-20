@@ -55,7 +55,7 @@ class AuthenticatedUserVO:
     
     def __eq__(self, other):
         if (isinstance(other, AuthenticatedUserVO)):
-            return self.__str__ == other.__str__            
+            return self.__str__ == other.__str__
         return False 
     
     def __str__(self):

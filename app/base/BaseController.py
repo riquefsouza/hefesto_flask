@@ -1,6 +1,8 @@
 from flask import session
 from app.base.models.AlertMessageVO import AlertMessageVO
 from app.admin.VO.AuthenticatedUserVO import AuthenticatedUserVO
+from app.admin.VO.MenuVO import MenuVO
+from app.admin.VO.UserVO import UserVO
 
 class BaseController:
 
@@ -14,9 +16,9 @@ class BaseController:
         self.loadMessagesWithAlertMessage(None)
 
     def loadMessagesWithAlertMessage(self, alertMessage: AlertMessageVO):
-        if (alertMessage == None)
+        if (alertMessage == None):
             self.__alertMessage = AlertMessageVO()
-        else
+        else:
             self.__alertMessage = alertMessage
 
         authenticatedUser = self.getAuthenticatedUser()
@@ -46,4 +48,15 @@ class BaseController:
     def removeUserAuthenticated(self):
         session.pop('authenticatedUser', None)
 
+    @property
+    def getAlertMessage(self) -> AlertMessageVO:
+        return self.__alertMessage
+
+    @property
+    def getUserLogged(self) -> AuthenticatedUserVO:
+        return self.__userLogged
+
+    @property
+    def getMenuItem(self) -> MenuVO:
+        return self.__menuItem
 

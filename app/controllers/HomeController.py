@@ -1,5 +1,5 @@
 from app import app, lm
-from flask import  render_template, redirect, url_for
+from flask import render_template, redirect, url_for
 from app.services.admin.admParameterCategoryService import AdmParameterCategoryService
 from app.services.admin.admUserService import login
 from flask_login import logout_user

@@ -23,6 +23,8 @@ pip install --upgrade pip
 
 pip install flask-sqlalchemy flask-migrate flask-script flask-wtf flask-login
 
+pip install flask-classy
+
 python3 run.py runserver
 
 
